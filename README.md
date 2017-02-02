@@ -1,5 +1,5 @@
 # Crypton-CNG-Management-System
-A web based CNG Management System using MySQL.
+A web based CNG Management System using MySQL Database.
 
 # Requirements
 1) XAMPP or WAMPSERVER. (OPTIONAL)
