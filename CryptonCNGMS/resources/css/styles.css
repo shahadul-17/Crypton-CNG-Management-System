@@ -1,0 +1,272 @@
+html * {
+	font-family: Arial !important;
+}
+
+.header, .header-home {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	position: absolute;
+}
+
+.header-home {
+	height: 750px;
+	background: url(../../resources/images/background.jpg) no-repeat;
+	background-size: cover;
+}
+
+.logo-home {
+	top: 30%;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+}
+
+.logo-contact {
+	top: 140px;
+	left: 250px;
+	right: 0px;
+	position: absolute;
+}
+
+nav-bar {
+	display: block;
+	background-color: #000000;
+	overflow: auto;
+}
+
+nav-item {
+    float: left;
+}
+
+nav-item a {
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav-item a:hover:not(.active) {
+    background-color: #33383b;
+}
+
+.active {
+    background-color: #d20000;
+}
+
+button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 16px;
+	margin: 5px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+	font-size: 14px;
+}
+
+overview-home {
+	position: absolute;
+	top: 750px;
+	left: 5%;
+	right: 0px;
+	margin: 0px;
+	width: 90%;
+	margin-right: 0px;
+}
+
+overview-contact {
+	position: absolute;
+	top: 100px;
+	left: 650px;
+	right: 0px;
+	margin: 0px;
+	width: 90%;
+	margin-right: 0px;
+	max-width: 500px;
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	margin: 0px;
+	padding: 20px;
+	right: 0px;
+	margin-right: 0px;
+	text-align: center;
+	background-color: #33383b;
+	color: #ffffff;
+}
+
+#container {
+	width: 100%;
+	overflow: hidden;
+	background: white;
+}
+
+.photobanner {
+	height: 233px;
+	width: 3550px;
+	margin-bottom: 80px;
+}
+
+.start-animation {
+	-webkit-animation: bannermove 30s linear infinite;
+	-moz-animation: bannermove 30s linear infinite;
+	-ms-animation: bannermove 30s linear infinite;
+	-o-animation: bannermove 30s linear infinite;
+	animation: bannermove 30s linear infinite;
+}
+
+@keyframes "bannermove" {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-moz-keyframes bannermove {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-webkit-keyframes "bannermove" {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-ms-keyframes "bannermove" {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+@-o-keyframes "bannermove" {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -2125px;
+	}
+}
+
+.photobanner img {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.photobanner img:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	cursor: pointer;
+
+	-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+input[type=text], input[type=password], input[type=date], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+	width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.image-container {
+	top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+span.password {
+    float: right;
+    padding-top: 16px;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5px auto;
+    border: 1px solid #888;
+    width: 500px;
+	height: 488px;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+		-webkit-transform: scale(0)
+	}
+    to {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes animatezoom {
+    from {
+		transform: scale(0)
+	}
+    to {
+		transform: scale(1)
+	}
+}
+
+.registration-form {
+	margin: 55px 0px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+.google-map {
+	position: relative;
+	top: 490px;
+}

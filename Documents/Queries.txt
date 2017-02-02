@@ -1,0 +1,55 @@
+Queries
+=======
+
+	Driver registration (insert data)
+	=================================
+		1) "INSERT INTO cryptoncngms.users VALUES('$uid', 'driver', '$fname', '$lname', '$email', '$password', '$gender', '$phone')"
+		2) "INSERT INTO cryptoncngms.drivers VALUES('$uid', '$address', '$vrn', '$birthdate', '$income')"
+
+	Passenger registration (insert data)
+	====================================
+		"INSERT INTO cryptoncngms.users VALUES('$uid', 'passenger', '$fname', '$lname', '$email', '$password', '$gender', '$phone')"
+		
+	Login (retrieve data)
+	=====================
+		"SELECT uid, utype FROM cryptoncngms.users WHERE email = '$email' and password = '$password'"
+
+	Admin profile (retrieve data)
+	=============================
+		"SELECT * FROM cryptoncngms.users WHERE cryptoncngms.users.uid = '$uid' and cryptoncngms.users.utype = 'admin'"
+
+	Admin to view driver informations (retrieve data)
+	=================================================
+		"SELECT * FROM cryptoncngms.users, cryptoncngms.drivers WHERE uid = dlnum"
+
+	Admin to view passenger informations (retrieve data)
+	====================================================
+		"SELECT fname, lname, phone, current_location, destination, date FROM cryptoncngms.users, cryptoncngms.passengers, adbpassenger WHERE cryptoncngms.users.uid = cryptoncngms.passengers.nid and cryptoncngms.passengers.id = cryptoncngms.adbpassenger.id"	
+
+	Driver profile (retrieve data)
+	==============================
+		"SELECT * FROM cryptoncngms.users, cryptoncngms.drivers WHERE cryptoncngms.users.uid = '$uid' and cryptoncngms.users.uid = cryptoncngms.drivers.dlnum"
+
+	Driver to see which passengers have booked CNG (retrieve data)
+	==============================================================
+		"SELECT fname, lname, phone, current_location, destination, date FROM cryptoncngms.users, cryptoncngms.passengers, adbpassenger WHERE cryptoncngms.users.uid = cryptoncngms.passengers.nid and cryptoncngms.passengers.id = cryptoncngms.adbpassenger.id"
+		
+	Passenger profile (retrieve data)
+	=================================
+		"SELECT * FROM cryptoncngms.users WHERE cryptoncngms.users.uid = '$uid' and cryptoncngms.users.utype = 'passenger'"
+
+	Passenger to see his/her own bookings (retrieve data)
+	=====================================================
+		"SELECT current_location, destination, date FROM cryptoncngms.passengers, adbpassenger WHERE cryptoncngms.passengers.nid = '$uid' and cryptoncngms.passengers.id = cryptoncngms.adbpassenger.id"
+		
+	Booking (insert data)
+	=====================
+		"INSERT INTO cryptoncngms.passengers VALUES('', '$uid', '$current_location', '$destination')"
+		
+		Urgent
+		======
+			"INSERT INTO cryptoncngms.adbpassenger VALUES('', '$uid', NULL)"
+		
+		Scheduled
+		=========
+			"INSERT INTO cryptoncngms.adbpassenger VALUES('', '$uid', '$date')"
