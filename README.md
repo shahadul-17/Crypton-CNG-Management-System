@@ -5,6 +5,6 @@ A web based CNG Management System using MySQL Database.
 1) XAMPP or WAMPSERVER. (OPTIONAL)
 
 # Scripting Languages
-1) HTML. (Designing)  
-2) CSS. (Styling)  
-3) PHP. (Database connectivity)  
+1) HTML (designing)  
+2) CSS (styling)  
+3) PHP (database connectivity)  
